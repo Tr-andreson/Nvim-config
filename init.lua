@@ -16,6 +16,11 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false
 vim.opt.tabstop = 2
 
+
+-- vim.o.laststatus = 2 
+-- vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE", ctermbg = "NONE" })
+-- vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE", ctermbg = "NONE" })
+
 vim.opt.shiftwidth = 2
 
 -- Force these settings to stay off every time a file is opened
