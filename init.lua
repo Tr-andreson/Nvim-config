@@ -4,7 +4,6 @@ vim.g.maplocalleader = " "
 
 require("config.lazy")
 
-vim.diagnostic.enable(false)
 
 vim.g.lazyvim_check_order = false
 vim.opt.swapfile = false       -- Disable swap files

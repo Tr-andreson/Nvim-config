@@ -1,5 +1,6 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  event = "VeryLazy", -- Lazy load on a useful event
   branch = "v3.x",
 
   dependencies = {
