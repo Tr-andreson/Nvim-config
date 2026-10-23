@@ -23,6 +23,10 @@ keymap.set({ "n", "t" }, "nw", ":tabclose<Return>", opts)
 -- Split window colemac
 vim.keymap.set("n", "ss", ":split<CR><C-w>w", opts)
 vim.keymap.set("n", "sv", ":vsplit<CR><C-w>w", opts)
+vim.keymap.set('n', 'gd', '<C-]>', { desc = 'Go to definition (Ctags)' })
+
+-- Jump back from definition
+vim.keymap.set('n', 'H', '<C-t>', { desc = 'Jump back from definition' })
 
 
 -- Move window
