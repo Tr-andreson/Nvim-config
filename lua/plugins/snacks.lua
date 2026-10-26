@@ -81,24 +81,6 @@ return {
         mode = { "n" },
       },
 
-      -- {
-      --   ";f",
-      --   function()
-      --     Snacks.picker.smart()
-      --   end,
-      --   desc = "Smart Find Files",
-      --   mode = { "n" },
-      -- },
-
-      -- {
-      --   ";r",
-      --   function()
-      --     Snacks.picker.grep_word()
-      --   end,
-      --   desc = "Grep Search",
-      --   mode = { "n" },
-      -- },
-
       {
         "<leader>z",
         function()

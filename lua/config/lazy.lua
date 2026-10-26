@@ -1,6 +1,9 @@
+-- Load core configurations first (options, keymaps, autocmds)
+require("config.keymaps")
+require("config.autocmds")
+require("config.options")
 -- bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 
 local uv = vim.uv or vim.loop
 if not uv.fs_stat(lazypath) then
@@ -28,18 +31,21 @@ require("lazy").setup({
   },
 
   defaults = {
-    lazy = false,
+    lazy = true,
     version = false,
   },
 
   checker = {
-    enabled = true,
+    enabled = false,
   },
 
   performance = {
     rtp = {
       disabled_plugins = {
         "gzip",
+        "matchit",
+        "matchparen",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
