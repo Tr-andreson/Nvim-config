@@ -16,8 +16,8 @@ return {
     opts = {
       -- 🌎 GLOBAL DEFAULTS (95% Horizontal)
       layout = {
-        width = 0.95,
-        height = 0.95,
+        width = 0.98,
+        height = 0.98,
         prompt_position = "top",
         preview_position = "right",
         preview_size = 0.55,
