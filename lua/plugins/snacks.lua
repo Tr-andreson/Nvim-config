@@ -3,16 +3,66 @@ return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
+
     opts = {
+      explorer = {
+        enabled = true,
+      },
+
       terminal = {
         win = {
-          position = "left", -- Opens as a horizontal split at the bottom
-          height = 0.3,        -- Takes up 30% of screen height
+          position = "left",
+          width = 0.45,
+        },
+      },
+
+      picker = {
+        win = {
+          input = {
+            keys = {
+              ["<Esc>"] = {
+                "close",
+                mode = { "n", "i" },
+              },
+            },
+          },
+        },
+
+        layout = {
+          preset = "default",
+          layout = {
+            width = 0.95,
+            height = 0.95,
+          },
+        },
+
+        sources = {
+          explorer = {
+            auto_close = true,
+
+            layout = {
+              preset = "default",
+              layout = {
+                box = "vertical",
+                position = "float",
+                width = 60,
+                height = 25,
+                border = "rounded",
+                {
+                  win = "input",
+                  height = 1,
+                },
+                {
+                  win = "list",
+                },
+              },
+            },
+          },
         },
       },
     },
+
     keys = {
-      -- Toggle bottom split terminal in both Normal and Terminal mode
       {
         "<leader>a",
         function()
@@ -21,13 +71,50 @@ return {
         desc = "Toggle Terminal Split",
         mode = { "n", "t" },
       },
+
       {
-        "<leader>f",
+        "<leader>e",
         function()
-          Snacks.picker.grep()
+          Snacks.explorer()
         end,
-        desc = "Toggle Terminal Split",
-        mode = { "n", "t" },
+        desc = "Toggle File Explorer",
+        mode = { "n" },
+      },
+
+      -- {
+      --   ";f",
+      --   function()
+      --     Snacks.picker.smart()
+      --   end,
+      --   desc = "Smart Find Files",
+      --   mode = { "n" },
+      -- },
+
+      -- {
+      --   ";r",
+      --   function()
+      --     Snacks.picker.grep_word()
+      --   end,
+      --   desc = "Grep Search",
+      --   mode = { "n" },
+      -- },
+
+      {
+        "<leader>z",
+        function()
+          Snacks.zen()
+        end,
+        desc = "Toggle Zen Mode",
+        mode = { "n" },
+      },
+
+      {
+        "<leader>fc",
+        function()
+          Snacks.colorschemes()
+        end,
+        desc = "Toggle Colorschemes",
+        mode = { "n" },
       },
     },
   },
