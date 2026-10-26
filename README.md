@@ -8,3 +8,5 @@ mv Nvim-config nvim
 cd nvim
 nvim init.lua
 ```
+
+
