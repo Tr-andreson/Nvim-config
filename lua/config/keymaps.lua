@@ -64,11 +64,3 @@ vim.keymap.set('i', "'", "''<Left>")
 vim.keymap.set('i', '`', '``<Left>')
 
 
-vim.opt.path:append({ "**" })
-
--- Display all matching files in a visual menu when tab-completing
-vim.opt.wildmenu = true
-vim.opt.wildmode = "longest:full,full"
-
--- Ignore specific folders and files from search results
-vim.opt.wildignore:append({ "*/.git/*", "*/node_modules/*", "*/target/*", "*.o", "*.obj" })

@@ -21,6 +21,14 @@ return {
         desc = "Toggle Terminal Split",
         mode = { "n", "t" },
       },
+      {
+        "<leader>f",
+        function()
+          Snacks.picker.grep()
+        end,
+        desc = "Toggle Terminal Split",
+        mode = { "n", "t" },
+      },
     },
   },
 }
