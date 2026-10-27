@@ -23,9 +23,10 @@ keymap.set({ "n", "t" }, "nw", ":tabclose<Return>", opts)
 -- Split window colemac
 vim.keymap.set("n", "ss", ":split<CR><C-w>w", opts)
 vim.keymap.set("n", "sv", ":vsplit<CR><C-w>w", opts)
-vim.keymap.set('n', 'gd', '<C-]>', { desc = 'Go to definition (Ctags)' })
 
--- Jump back from definition
+
+-- Goto Tags Ctags
+vim.keymap.set('n', 'gd', '<C-]>', { desc = 'Go to definition (Ctags)' })
 vim.keymap.set('n', 'H', '<C-t>', { desc = 'Jump back from definition' })
 
 
@@ -41,26 +42,16 @@ keymap.set("n", "<C-l>", "<C-w><") -- Ctrl + h
 keymap.set("n", "<C-h>", "<C-w>>") -- Ctrl + l
 
 
-
-
-
 -- keymap.set("n", "ff", "<C-u>")
 keymap.set("n", ";;", "<C-d>")
 
 vim.opt.timeoutlen = 300
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true })
 
-
 keymap.set("n", "<space>ul", function()
   vim.wo.number = not vim.wo.number
   vim.wo.relativenumber = vim.wo.number
 end, { desc = "Toggle line + relative numbers" })
 
-vim.keymap.set('i', '(', '()<Left>')
-vim.keymap.set('i', '[', '[]<Left>')
-vim.keymap.set('i', '{', '{}<Left>')
-vim.keymap.set('i', '"', '""<Left>')
-vim.keymap.set('i', "'", "''<Left>")
-vim.keymap.set('i', '`', '``<Left>')
 
 

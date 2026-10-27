@@ -63,14 +63,14 @@ return {
     },
 
     keys = {
-      {
-        "<leader>a",
-        function()
-          Snacks.terminal.toggle()
-        end,
-        desc = "Toggle Terminal Split",
-        mode = { "n", "t" },
-      },
+      -- {
+      --   "<leader>a",
+      --   function()
+      --     Snacks.terminal.toggle()
+      --   end,
+      --   desc = "Toggle Terminal Split",
+      --   mode = { "n", "t" },
+      -- },
 
       {
         "<leader>e",
@@ -81,14 +81,14 @@ return {
         mode = { "n" },
       },
 
-      {
-        "<leader>z",
-        function()
-          Snacks.zen()
-        end,
-        desc = "Toggle Zen Mode",
-        mode = { "n" },
-      },
+      -- {
+      --   "<leader>z",
+      --   function()
+      --     Snacks.zen()
+      --   end,
+      --   desc = "Toggle Zen Mode",
+      --   mode = { "n" },
+      -- },
 
       {
         "<leader>fc",
