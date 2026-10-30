@@ -1,5 +1,4 @@
-simple object acess protocal
-
+Installation
 
 ```
 cd .config
