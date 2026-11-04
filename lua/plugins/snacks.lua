@@ -63,14 +63,14 @@ return {
     },
 
     keys = {
-      -- {
-      --   "<leader>a",
-      --   function()
-      --     Snacks.terminal.toggle()
-      --   end,
-      --   desc = "Toggle Terminal Split",
-      --   mode = { "n", "t" },
-      -- },
+      {
+        "<leader>a",
+        function()
+          Snacks.terminal.toggle()
+        end,
+        desc = "Toggle Terminal Split",
+        mode = { "n", "t" },
+      },
 
       {
         "<leader>e",
@@ -101,3 +101,4 @@ return {
     },
   },
 }
+

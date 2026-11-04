@@ -10,6 +10,7 @@ require("config.lazy")
 vim.opt.swapfile = false       -- Disable swap files
 vim.opt.foldmethod = "manual"
 vim.opt.number = false         -- Absolute line numbers
+vim.cmd("syntax off");
 vim.opt.relativenumber = false -- Relative line numbers
 vim.o.laststatus = 0
 vim.opt.termguicolors = true
