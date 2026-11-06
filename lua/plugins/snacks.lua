@@ -66,9 +66,21 @@ return {
       {
         "<leader>a",
         function()
-          Snacks.terminal.toggle()
+          -- Left terminal (default session)
+          Snacks.terminal.toggle(nil, { win = { position = "left" } })
         end,
-        desc = "Toggle Terminal Split",
+        desc = "Toggle Left Terminal",
+        mode = { "n", "t" },
+      },
+
+      {
+        "<leader>;",
+        function()
+          -- Right terminal with a separate session/command
+          -- Replace "bash" or add flags if you want an entirely separate isolated shell process
+          Snacks.terminal.toggle("bash", { win = { position = "right" } })
+        end,
+        desc = "Toggle Right Terminal (Separate Session)",
         mode = { "n", "t" },
       },
 
@@ -81,15 +93,6 @@ return {
         mode = { "n" },
       },
 
-      -- {
-      --   "<leader>z",
-      --   function()
-      --     Snacks.zen()
-      --   end,
-      --   desc = "Toggle Zen Mode",
-      --   mode = { "n" },
-      -- },
-
       {
         "<leader>fc",
         function()
@@ -101,4 +104,3 @@ return {
     },
   },
 }
-
