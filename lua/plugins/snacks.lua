@@ -31,8 +31,8 @@ return {
         layout = {
           preset = "default",
           layout = {
-            width = 0.95,
-            height = 0.95,
+            width = 0.98,
+            height = 0.98,
           },
         },
 
@@ -94,11 +94,20 @@ return {
       },
 
       {
-        "<leader>fc",
+        ";a",
         function()
-          Snacks.colorschemes()
+          Snacks.picker.grep()
         end,
-        desc = "Toggle Colorschemes",
+        desc = "Grep ",
+        mode = { "n" },
+      },
+
+      {
+        ";f",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "File picker",
         mode = { "n" },
       },
     },

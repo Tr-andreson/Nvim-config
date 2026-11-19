@@ -21,3 +21,4 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false          -- Enable line wrap
 
 
+
