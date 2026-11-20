@@ -16,7 +16,7 @@ keymap.set("n", "<space>Q", ":qa<Return>", opts)
 -- Tabs
 keymap.set("n", "nm", ":tabedit<Return>")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set({ "n", "t" }, "<space><space>", ":Lazy<Return>", opts)
+keymap.set({ "n", "t" }, "<space>l", ":Lazy<Return>", opts)
 keymap.set({ "n", "t" }, "nn", ":tabprev<Return>", opts)
 keymap.set({ "n", "t" }, "nw", ":tabclose<Return>", opts)
 

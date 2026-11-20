@@ -29,7 +29,7 @@ return {
         },
 
         layout = {
-          preset = "default",
+          -- preset = "default",
           layout = {
             width = 0.98,
             height = 0.98,
@@ -39,7 +39,6 @@ return {
         sources = {
           explorer = {
             auto_close = true,
-
             layout = {
               preset = "default",
               layout = {
@@ -66,7 +65,6 @@ return {
       {
         "<leader>a",
         function()
-          -- Left terminal (default session)
           Snacks.terminal.toggle(nil, { win = { position = "left" } })
         end,
         desc = "Toggle Left Terminal",
@@ -76,11 +74,17 @@ return {
       {
         "<leader>;",
         function()
-          -- Right terminal with a separate session/command
-          -- Replace "bash" or add flags if you want an entirely separate isolated shell process
           Snacks.terminal.toggle("bash", { win = { position = "right" } })
         end,
         desc = "Toggle Right Terminal (Separate Session)",
+        mode = { "n", "t" },
+      },
+      {
+        "<leader>o",
+        function()
+          Snacks.terminal.toggle(nil, { win = { position = "bottom" } })
+        end,
+        desc = "Toggle Bottom Terminal (Separate Session)",
         mode = { "n", "t" },
       },
 
