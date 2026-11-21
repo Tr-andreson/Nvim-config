@@ -1,21 +1,17 @@
 return {
   {
     "folke/snacks.nvim",
-    priority = 1000,
-    lazy = false,
-
+    lazy = true,
     opts = {
       explorer = {
         enabled = true,
       },
-
       terminal = {
         win = {
           position = "left",
           width = 0.45,
         },
       },
-
       picker = {
         win = {
           input = {
@@ -27,15 +23,12 @@ return {
             },
           },
         },
-
         layout = {
-          -- preset = "default",
           layout = {
             width = 0.98,
             height = 0.98,
           },
         },
-
         sources = {
           explorer = {
             auto_close = true,
@@ -47,20 +40,14 @@ return {
                 width = 60,
                 height = 25,
                 border = "rounded",
-                {
-                  win = "input",
-                  height = 1,
-                },
-                {
-                  win = "list",
-                },
+                { win = "input", height = 1 },
+                { win = "list" },
               },
             },
           },
         },
       },
     },
-
     keys = {
       {
         "<leader>a",
@@ -70,7 +57,6 @@ return {
         desc = "Toggle Left Terminal",
         mode = { "n", "t" },
       },
-
       {
         "<leader>;",
         function()
@@ -82,12 +68,14 @@ return {
       {
         "<leader>o",
         function()
-          Snacks.terminal.toggle(nil, { win = { position = "bottom" } })
+          Snacks.terminal.toggle(vim.o.shell, {
+            env = { SNACKS_TERM_POS = "bottom" },
+            win = { position = "bottom", split = "below" },
+          })
         end,
         desc = "Toggle Bottom Terminal (Separate Session)",
         mode = { "n", "t" },
       },
-
       {
         "<leader>e",
         function()
@@ -96,16 +84,14 @@ return {
         desc = "Toggle File Explorer",
         mode = { "n" },
       },
-
       {
-        ";a",
+        ";r",
         function()
           Snacks.picker.grep()
         end,
-        desc = "Grep ",
+        desc = "Grep",
         mode = { "n" },
       },
-
       {
         ";f",
         function()

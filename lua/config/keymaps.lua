@@ -16,18 +16,18 @@ keymap.set("n", "<space>Q", ":qa<Return>", opts)
 -- Tabs
 keymap.set("n", "nm", ":tabedit<Return>")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set({ "n", "t" }, "<space>l", ":Lazy<Return>", opts)
+keymap.set({ "n", "t" }, "<space><space>", ":Lazy<Return>", opts)
 keymap.set({ "n", "t" }, "nn", ":tabprev<Return>", opts)
 keymap.set({ "n", "t" }, "nw", ":tabclose<Return>", opts)
 
 -- Split window colemac
-vim.keymap.set("n", "ss", ":split<CR><C-w>w", opts)
-vim.keymap.set("n", "sv", ":vsplit<CR><C-w>w", opts)
+keymap.set("n", "ss", ":split<CR><C-w>w", opts)
+keymap.set("n", "sv", ":vsplit<CR><C-w>w", opts)
 
 
 -- Goto Tags Ctags
-vim.keymap.set('n', 'gd', '<C-]>', { desc = 'Go to definition (Ctags)' })
-vim.keymap.set('n', 'H', '<C-t>', { desc = 'Jump back from definition' })
+keymap.set('n', 'gd', '<C-]>', { desc = 'Go to definition (Ctags)' })
+keymap.set('n', 'H', '<C-t>', { desc = 'Jump back from definition' })
 
 
 -- Move window
